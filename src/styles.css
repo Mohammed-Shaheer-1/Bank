@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+   
+    background-image: url("./assets/Bank.jpg"); 
+    background-blend-mode: color;
+        background-color: rgba(0, 0, 0, 0.512); 
+        background-size: cover;
+        background-attachment: fixed;
+}
