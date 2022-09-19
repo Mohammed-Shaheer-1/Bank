@@ -8,14 +8,13 @@
 .loginPanel{
     margin: 150px;
     height: 49vh;
+    /* background-color: aliceblue; */
     width: 45vh;
     border-radius: 30px;
     box-shadow: 0px 20px 100px;
     padding: 1.1rem;
     text-align: center;
     overflow: hidden;
-    background-color: #343638;
-    opacity: 0.5;
 }
 .btn{
     margin-top: 4rem;
@@ -43,9 +42,9 @@ input{
 
     .btn{
         
-        border: 2px solid gray;
+        border: 2px solid #00ff0d;
         outline: none;
-        color: #007de3;
+        color: #00ff0d;
         font-size: 10px;
         font-weight: lighter;
         letter-spacing: 4px;
@@ -53,10 +52,10 @@ input{
     }
 
     .btn:hover{
-        color: #255784;
-        background-color: #6a8296;
-        border: #2196f3;
-        box-shadow: 0 0 10px #76828b, 0 0 40px #37424b, 0 0 80px #5b6975;
+        color: #00ff0d;
+        background-color: #00ff0d;
+        border: #00ff0d;
+        box-shadow: 0 0 10px #00ff0d, 0 0 40px #00ff0d, 0 0 80px #00ff0d;
         color: white;
     }
 
@@ -79,7 +78,7 @@ input{
         font-size: 1rem;
         justify-content: center;
         display: flex;
-        margin: 15px;
+        margin: 10px;
        
         cursor: pointer;
         transition: .5s ease-in-out;
@@ -94,18 +93,4 @@ input{
     label:hover{
         text-decoration: underline 1.5px;
         letter-spacing: 2px;
-    }
-
-    #checkAcc:checked~#acno{
-        transform: translateX(-12px);
-    }
-    .navbar{
-        top: 0;
-     position: sticky;
-     background-color:rgb(231, 228, 228) ;
-     opacity: 0.7;
-     z-index: 3;
-    }
-    .collapse{
-         margin-left: 180px;
     }

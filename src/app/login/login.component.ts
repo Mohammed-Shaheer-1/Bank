@@ -10,41 +10,52 @@ export class LoginComponent implements OnInit {
  test:string="Happy banking"
  Acno:number=0
  password:number=0
- database:any={
-  1000:{accno:1000,pwd:2000}
- }
+
   constructor() { }
 
   ngOnInit(): void {
   }
   AccNo(event:any){
       this.Acno=event.target.value
-      console.log("this pwd",this.Acno);  
+
+      
+ 
   }
   Password(event:any){
     this.password=event.target.value
-    console.log("this password",this.password);
+ 
     }
 
 
   login(){
     var acno=this.Acno
     var passw=this.password
-    if(acno in  this.database){
-    //  var crctpwd=
-    
-         if( passw==this.database[acno]["pwd"]){
-          alert("login succesfull")
+    var data:any=localStorage.getItem("db")
+    var test =JSON.parse(data)
+    console.log("test",test);
+   var flag=0
+    for(let ts of test){
 
-         }else{
-          alert("incorrect password try again")
-         }
-
-    }else{
-      alert("user dous not exist")
+       
+   if(ts.accNo==acno && ts.pwd==passw){
+     flag=1
+     break
+   }else{
+  alert("Not match")
     }
-      
+ }
+    if(flag==1){
+      alert("login succesfull")
+    }
     
+
+   
+
+
+
+
+
+ 
   }
 
 }
