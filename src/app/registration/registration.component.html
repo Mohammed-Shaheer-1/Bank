@@ -4,7 +4,7 @@
         
             <div class="login" id="login">
                 <h2>SignUp</h2>
-                <input class="mb-3" type="text" (change)="Accno($event)" placeholder="Account Number" id="acno">
+                <input class="mb-3" type="text" [(ngModel)]="accno" placeholder="Account Number" id="acno">
                 <input class="mb-2" type="text"  (change)="user($event)"  placeholder="Username" id="uname">
                 <input class="mt-2 mb-4" type="password"  (change)="pwd($event)" name="password" id="pword" placeholder="Password">
                 <input class="btn mt-4" type="button" value="Sign Up" (click)="signup()">

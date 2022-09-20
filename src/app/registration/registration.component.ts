@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataserviceService } from '../service/dataservice.service';
 
 @Component({
   selector: 'app-registration',
@@ -7,16 +8,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent implements OnInit {
-   accountNo:number=0
+  accno:any
    userName:string=""
    password:any=""
    
-   constructor(private router:Router) { }
+   constructor(private  db:DataserviceService,private  router:Router) { }
  
   ngOnInit(): void {
   }
    Accno(event:any){
-    this.accountNo=event.target.value
+    this.accno=event.target.value
 
    }
    user(event:any){
@@ -28,21 +29,28 @@ export class RegistrationComponent implements OnInit {
    }
 
   signup(){
-    var array=[]
-   var storage={
-      accNo:this.accountNo,
-      user:this.userName,
-      pwd:this.password
-       }
-       array.push(storage)
-       console.log(array);
-       array= array.concat(JSON.parse(localStorage.getItem("db")||'[]'))
-      console.log(array);
+  //   var array=[]
+  //  var storage={
+  //     accNo:this.accno,
+  //     user:this.userName,
+  //     pwd:this.password
+  //      }
+  //      array.push(storage)
+  //      console.log(array);
+  //      array= array.concat(JSON.parse(localStorage.getItem("db")||'[]'))
+  //     console.log(array);
  
-      localStorage.setItem("db",JSON.stringify(array))
-      this.router.navigateByUrl('homepage')
+  //     localStorage.setItem("db",JSON.stringify(array))
+  //     this.router.navigateByUrl('homepage')
+  this.db.register(this.accno,this.userName,this.password,0)
+  console.log(this.db.database);
+      //  this.router.navigateByUrl('homepage')
 
 
+
+  
+
+    
   }
 
 }

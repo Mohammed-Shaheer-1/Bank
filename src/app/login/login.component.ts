@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit {
  Acno:number=0
  password:number=0
 
+
   constructor(private router:Router) { }
 
   ngOnInit(): void {
@@ -29,26 +30,26 @@ export class LoginComponent implements OnInit {
 
 
   login(){
-    var acno=this.Acno
-    var passw=this.password
-    var data:any=localStorage.getItem("db")
-    var test =JSON.parse(data)
-    console.log("test",test);
-   var flag=0
-    for(let ts of test){
+//     var acno=this.Acno
+//     var passw=this.password
+//     var data:any=localStorage.getItem("db")
+//     var test =JSON.parse(data)
+//     console.log("test",test);
+//    var flag=0
+//     for(let ts of test){
 
        
-   if(ts.accNo==acno && ts.pwd==passw){
-     flag=1
-     break
-   }else{
-  alert("Not match")
-    }
- }
-    if(flag==1){
-      alert("login succesfull")
-      this.router.navigateByUrl('homepage')
-    }
+//    if(ts.accNo==acno && ts.pwd==passw){
+//      flag=1
+//      break
+//    }else{
+//   alert("Not match")
+//     }
+//  }
+//     if(flag==1){
+//       alert("login succesfull")
+//       this.router.navigateByUrl('homepage')
+//     }
     
 
   }
