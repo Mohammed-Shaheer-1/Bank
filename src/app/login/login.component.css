@@ -45,15 +45,15 @@ input{
         
         border: 2px solid gray;
         outline: none;
-        color: #007de3;
-        font-size: 10px;
+        color: #f7f9fc;
+        font-size: 15px;
         font-weight: lighter;
         letter-spacing: 4px;
         
     }
 
     .btn:hover{
-        color: #255784;
+        color: #cfd8e0;
         background-color: #6a8296;
         border: #2196f3;
         box-shadow: 0 0 10px #76828b, 0 0 40px #37424b, 0 0 80px #5b6975;
@@ -109,3 +109,13 @@ input{
     .collapse{
          margin-left: 180px;
     }
+button{
+    margin-top: 5px;
+    color: #ffffff;
+    background-color: #6a8296;
+    border: #2196f3;
+    width: 150px;
+
+    box-shadow: 0 0 10px #76828b, 0 0 40px #37424b, 0 0 80px #5b6975;
+}
+

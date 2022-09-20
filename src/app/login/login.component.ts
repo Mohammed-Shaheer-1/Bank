@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ export class LoginComponent implements OnInit {
  Acno:number=0
  password:number=0
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -46,16 +47,15 @@ export class LoginComponent implements OnInit {
  }
     if(flag==1){
       alert("login succesfull")
+      this.router.navigateByUrl('homepage')
     }
     
 
-   
+  }
 
-
-
-
-
- 
+  register(){
+    console.log('STARTED')
+this.router.navigateByUrl('registration')
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registration',
@@ -9,9 +10,9 @@ export class RegistrationComponent implements OnInit {
    accountNo:number=0
    userName:string=""
    password:any=""
-  
-  constructor() { }
-
+   
+   constructor(private router:Router) { }
+ 
   ngOnInit(): void {
   }
    Accno(event:any){
@@ -39,8 +40,7 @@ export class RegistrationComponent implements OnInit {
       console.log(array);
  
       localStorage.setItem("db",JSON.stringify(array))
-       
-
+      this.router.navigateByUrl('homepage')
 
 
   }

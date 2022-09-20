@@ -33,12 +33,14 @@
                 
                 <input class="mb-2" (change)="AccNo($event)" type="text"[placeholder]="data" id="uname">
                 <input class="mt-2 mb-5" type="password" (change)="Password($event)"  name="password" id="pword" placeholder="Password">
-                <input class="btn mt-4" type="button" (click)='login()' value="Sign Up" onclick="val()">
+        
+                <button class="inp btn mt-4" type="button" (click)='login()' value ="login" onclick="val()">login</button>
 
                 
                 <div class="alreadyUser">
-                    <input type="checkbox" class="checkAcc" name="accAlready" id="checkAcc">
-                    <label  id="signup" for="accAlready">SignUp</label>
+                    <!-- <button class="checkAcc" name="accAlready" (click)='register()'  id="checkAcc">
+                    <label  id="signup" for="accAlready" >SignUp</label> -->
+                    <button (click)="register()">SignUp</button>
                 </div>
                 
                 
